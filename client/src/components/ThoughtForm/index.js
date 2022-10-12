@@ -95,7 +95,7 @@ const ThoughtForm = () => {
         />
         <input
           className="form-input"
-          placeholder="Category"
+          placeholder="FrontEnd, BackEnd, or FullStack"
           name="tag"
           type="tag"
           id="tag"

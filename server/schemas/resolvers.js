@@ -109,6 +109,12 @@ const resolvers = {
 
       throw new AuthenticationError('You need to be logged in!');
     },
+    deleteThought: async (parent, { _id }, context) => {
+      if (context.user) {
+        await Thought.findByIdAndDelete({ _id: _id });
+        return;
+      }
+    },
   },
 };
 

@@ -90,3 +90,13 @@ export const ADD_REACTION = gql`
     }
   }
 `;
+
+export const DELETE_THOUGHT = gql`
+  mutation deleteThought($id: ID!) {
+    deleteThought(_id: $id) {
+      thought {
+        title
+      }
+    }
+  }
+`;
