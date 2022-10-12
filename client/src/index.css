@@ -100,6 +100,11 @@ nav a:hover {
   background-color: var(--dark);
 }
 
+.thought-link {
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
 .page-title {
   text-align: center;
   width: 100%;
@@ -131,6 +136,24 @@ nav a:hover {
   display: inline;
 }
 
+.delet-btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  border: none;
+  color: var(--error);
+  outline: none;
+  background-color: var(--tertiary);
+  transition: all 0.5s;
+}
+
+.delet-btn:hover {
+  color: var(--secondary);
+  background-color: var(--error);
+}
+
 /* CARDS */
 .card {
   margin: 0 0 20px 0;
@@ -141,6 +164,15 @@ nav a:hover {
 }
 
 .card-header {
+  color: var(--secondary);
+  margin: 0;
+  background-color: var(--dark);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  text-align: center;
+}
+
+.card-footer {
   color: var(--secondary);
   margin: 0;
   background-color: var(--dark);

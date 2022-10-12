@@ -53,8 +53,7 @@ const ThoughtForm = () => {
       });
 
       // clear form value
-      setFormState('');
-      console.log(...formState);
+      setFormState({ title: '', thoughtText: '', link: '', tag: '' });
     } catch (e) {
       console.error(e);
     }

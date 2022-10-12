@@ -17,8 +17,13 @@ const ThoughtList = ({ thoughts, title }) => {
               <Link to={`/thought/${thought._id}`}>
                 <p>{thought.thoughtText}</p>
               </Link>
-              <a href={thought.link}>{thought.link}</a>
-              <p>{thought.tag}</p>
+              <a href={thought.link} className="thought-link">
+                {thought.link}
+              </a>
+              <br></br>
+              <br></br>
+              <p className="thought-tag">{thought.tag}</p>
+              <br></br>
               <Link to={`/thought/${thought._id}`}>
                 <p className="mb-0">
                   Reactions: {thought.reactionCount} || Click to{' '}

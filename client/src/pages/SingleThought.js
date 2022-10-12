@@ -39,18 +39,25 @@ const SingleThought = (props) => {
   return (
     <div>
       <div className="card mb-3">
-        <p className="card-header">
-          <span style={{ fontWeight: 700 }} className="text-light">
-            {thought.username}
-          </span>{' '}
-          thought on {thought.createdAt}
-        </p>
+        <p className="card-header">{thought.title}</p>
         <div className="card-body">
-          <p>{thought.title}</p>
           <p>{thought.thoughtText}</p>
-          <p>{thought.link}</p>
-          <p>{thought.tag}</p>
-          <button onClick={deleteThought}>delete</button>
+          <a href={thought.link} className="thought-link">
+            {thought.link}
+          </a>
+          <br></br>
+          <br></br>
+          <p className="thought-tag">{thought.tag}</p>
+          <br></br>
+          <p className="card-footer">
+            <span style={{ fontWeight: 700 }} className="text-light">
+              {thought.username}
+            </span>{' '}
+            thought on {thought.createdAt}
+          </p>
+          <button onClick={deleteThought} className="delet-btn">
+            delete
+          </button>
         </div>
       </div>
 
