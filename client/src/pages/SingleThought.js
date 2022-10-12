@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_THOUGHT, QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_THOUGHT, QUERY_THOUGHTS, QUERY_ME } from '../utils/queries';
 import { DELETE_THOUGHT } from '../utils/mutations';
 import ReactionList from '../components/ReactionList';
 import ReactionForm from '../components/ReactionForm';
@@ -21,7 +21,7 @@ const SingleThought = (props) => {
   const [deleteThought, { error }] = useMutation(DELETE_THOUGHT, {
     variables: { id: thoughtId },
     onCompleted: () => navigate('/'),
-    refetchQueries: [{ query: QUERY_THOUGHTS }],
+    refetchQueries: [{ query: QUERY_THOUGHTS, query: QUERY_ME }],
   });
 
   if (loading) {
