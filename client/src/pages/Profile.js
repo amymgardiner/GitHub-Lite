@@ -12,7 +12,7 @@ const Profile = () => {
   const { username: userParam } = useParams();
   const [addFriend] = useMutation(ADD_FRIEND);
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
+    variables: { username: userParam, fullname: userParam },
   });
 
   const user = data?.me || data?.user || {};
@@ -68,11 +68,9 @@ const Profile = () => {
         </div>
 
         <div className="col-12 col-lg-3 mb-3">
-          <FriendList
-            username={user.username}
-            friendCount={user.friendCount}
-            friends={user.friends}
-          />
+          <h2>Contact:</h2>
+          <p>{user.fullname}</p>
+          <p>{user.email}</p>
         </div>
       </div>
       <div className="mb-3">{!userParam && <ThoughtForm />}</div>
