@@ -28,7 +28,10 @@ const SingleThought = (props) => {
           thought on {thought.createdAt}
         </p>
         <div className="card-body">
+          <p>{thought.title}</p>
           <p>{thought.thoughtText}</p>
+          <p>{thought.link}</p>
+          <p>{thought.tag}</p>
         </div>
       </div>
 

@@ -24,7 +24,10 @@ const ThoughtList = ({ thoughts, title }) => {
             </p>
             <div className="card-body">
               <Link to={`/thought/${thought._id}`}>
+                <p>{thought.title}</p>
                 <p>{thought.thoughtText}</p>
+                <p>{thought.link}</p>
+                <p>{thought.tag}</p>
                 <p className="mb-0">
                   Reactions: {thought.reactionCount} || Click to{' '}
                   {thought.reactionCount ? 'see' : 'start'} the discussion!
