@@ -4,31 +4,41 @@ const dateFormat = require('../utils/dateFormat');
 
 const thoughtSchema = new Schema(
   {
+    title: {
+      type: String,
+      required: true,
+    },
     thoughtText: {
       type: String,
-      required: 'You need to leave a thought!',
-      minlength: 1,
-      maxlength: 280
+      required: true,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
+    tag: {
+      type: String,
+      required: true,
     },
     createdAt: {
       type: Date,
       default: Date.now,
-      get: timestamp => dateFormat(timestamp)
+      get: (timestamp) => dateFormat(timestamp),
     },
     username: {
       type: String,
-      required: true
+      required: true,
     },
-    reactions: [reactionSchema]
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
-      getters: true
-    }
+      getters: true,
+    },
   }
 );
 
-thoughtSchema.virtual('reactionCount').get(function() {
+thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
 

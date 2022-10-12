@@ -4,8 +4,12 @@ import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
 const ThoughtForm = () => {
-  const [thoughtText, setText] = useState('');
-  const [characterCount, setCharacterCount] = useState(0);
+  const [formState, setFormState] = useState({
+    title: '',
+    thoughtText: '',
+    link: '',
+    tag: '',
+  });
 
   const [addThought, { error }] = useMutation(ADD_THOUGHT, {
     update(cache, { data: { addThought } }) {
@@ -31,10 +35,12 @@ const ThoughtForm = () => {
   });
 
   const handleChange = (event) => {
-    if (event.target.value.length <= 280) {
-      setText(event.target.value);
-      setCharacterCount(event.target.value.length);
-    }
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
   const handleFormSubmit = async (event) => {
@@ -43,12 +49,12 @@ const ThoughtForm = () => {
     try {
       // add thought to database
       await addThought({
-        variables: { thoughtText },
+        variables: { ...formState },
       });
 
       // clear form value
-      setText('');
-      setCharacterCount(0);
+      setFormState('');
+      console.log(...formState);
     } catch (e) {
       console.error(e);
     }
@@ -56,22 +62,46 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <p
-        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
-      >
-        Character Count: {characterCount}/280
-        {error && <span className="ml-2">Something went wrong...</span>}
-      </p>
       <form
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
       >
-        <textarea
-          placeholder="Here's a new thought..."
-          value={thoughtText}
-          className="form-input col-12 col-md-9"
+        <input
+          className="form-input"
+          placeholder="Title"
+          name="title"
+          type="title"
+          id="title"
+          value={formState.title}
           onChange={handleChange}
-        ></textarea>
+        />
+        <input
+          className="form-input"
+          placeholder="Description"
+          name="thoughtText"
+          type="thoughtText"
+          id="thoughtText"
+          value={formState.thoughtText}
+          onChange={handleChange}
+        />
+        <input
+          className="form-input"
+          placeholder="Link"
+          name="link"
+          type="link"
+          id="link"
+          value={formState.link}
+          onChange={handleChange}
+        />
+        <input
+          className="form-input"
+          placeholder="Category"
+          name="tag"
+          type="tag"
+          id="tag"
+          value={formState.tag}
+          onChange={handleChange}
+        />
         <button className="btn col-12 col-md-3" type="submit">
           Submit
         </button>

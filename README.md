@@ -1,7 +1,5 @@
 # Deep Thoughts
 
-[Deployed App Link](https://mighty-temple-98827.herokuapp.com/)
-
 ## About Module 21 Lesson Activity - MERN
 
 I built a social media application using the MERN stack. The app, named Deep Thoughts, allows users to sign up and create an account, post their thoughts, and interact with other users.
