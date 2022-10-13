@@ -850,11 +850,11 @@ nav a:hover {
 }
 
 .bg-light {
-  background-color: var(--light);
+  background-color: var(--tertiary);
 }
 
 .bg-dark {
-  background-color: var(--dark);
+  background-color: var(--quatrinary);
 }
 
 /* FLEX CONTENT */

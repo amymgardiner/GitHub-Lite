@@ -66,7 +66,7 @@ const Profile = () => {
           />
         </div>
 
-        <div className="col-12 col-lg-3 mb-3">
+        <div className="col-12 col-lg-3 mb-3 bg-dark p-3">
           <h2>Contact:</h2>
           <p>{user.fullname}</p>
           <p>{user.email}</p>
