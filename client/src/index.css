@@ -91,6 +91,10 @@ header h1:hover {
   color: var(--blue);
 }
 
+.fa-hippo {
+  padding-left: 15px;
+}
+
 p {
   font-size: 1.1rem;
   margin-top: 0;

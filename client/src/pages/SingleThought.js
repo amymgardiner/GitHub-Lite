@@ -42,18 +42,19 @@ const SingleThought = (props) => {
         <p className="card-header">{thought.title}</p>
         <div className="card-body">
           <p>{thought.thoughtText}</p>
-          <a href={thought.link} className="thought-link">
-            {thought.link}
-          </a>
+          <div className="thought-link">
+            <a href={thought.link} className="thought-link">
+              {thought.link}
+            </a>
+          </div>
           <br></br>
-          <br></br>
-          <p className="thought-tag">{thought.tag}</p>
+          <p className="thought-tag">Technologies used: {thought.tag}</p>
           <br></br>
           <p className="card-footer">
             <span style={{ fontWeight: 700 }} className="text-light">
               {thought.username}
             </span>{' '}
-            thought on {thought.createdAt}
+            posted on {thought.createdAt}
           </p>
           <button onClick={deleteThought} className="delet-btn">
             delete

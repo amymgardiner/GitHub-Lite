@@ -67,7 +67,7 @@ const ThoughtForm = () => {
       >
         <input
           className="form-input"
-          placeholder="Title"
+          placeholder="Enter your project's title"
           name="title"
           type="title"
           id="title"
@@ -76,7 +76,7 @@ const ThoughtForm = () => {
         />
         <input
           className="form-input"
-          placeholder="Description"
+          placeholder="Enter a description of your project"
           name="thoughtText"
           type="thoughtText"
           id="thoughtText"
@@ -85,7 +85,7 @@ const ThoughtForm = () => {
         />
         <input
           className="form-input"
-          placeholder="Link"
+          placeholder="Add a link to view your project"
           name="link"
           type="link"
           id="link"
@@ -94,7 +94,7 @@ const ThoughtForm = () => {
         />
         <input
           className="form-input"
-          placeholder="FrontEnd, BackEnd, or FullStack"
+          placeholder="List the technologies you used..."
           name="tag"
           type="tag"
           id="tag"

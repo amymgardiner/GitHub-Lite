@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>No Projects Yet</h3>;
   }
 
   return (
@@ -23,11 +23,11 @@ const ThoughtList = ({ thoughts, title }) => {
                 </a>
               </div>
               <br></br>
-              <p className="thought-tag">{thought.tag}</p>
+              <p className="thought-tag">Technologies used: {thought.tag}</p>
               <br></br>
               <Link to={`/thought/${thought._id}`}>
                 <p className="mb-0">
-                  Reactions: {thought.reactionCount} || Click to{' '}
+                  Comments: {thought.reactionCount} || Click to{' '}
                   {thought.reactionCount ? 'see' : 'start'} the discussion!
                 </p>
               </Link>
@@ -40,7 +40,7 @@ const ThoughtList = ({ thoughts, title }) => {
                 >
                   {thought.username}
                 </Link>{' '}
-                thought on {thought.createdAt}
+                posted on {thought.createdAt}
               </p>
             </div>
           </div>
