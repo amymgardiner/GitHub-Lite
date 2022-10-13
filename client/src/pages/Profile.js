@@ -13,7 +13,7 @@ const Profile = () => {
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam, fullname: userParam },
   });
-
+  const loggedIn = Auth.loggedIn();
   const user = data?.me || data?.user || {};
 
   // navigate to personal profile page if username is the logged-in user's
@@ -51,7 +51,7 @@ const Profile = () => {
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
 
-        {userParam && (
+        {loggedIn && userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
             Add Friend
           </button>
