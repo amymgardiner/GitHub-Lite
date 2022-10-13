@@ -30,10 +30,6 @@ header {
   text-decoration: underline;
 }
 
-header h1:hover {
-  color: var(--blue);
-}
-
 footer {
   border: 2px solid var(--tertiary);
   color: var(--tertiary);
@@ -43,7 +39,7 @@ footer {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
@@ -57,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   font-weight: 700;
   margin: 5px 0;
   line-height: 1.25;
@@ -85,6 +81,14 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+header h1 {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+header h1:hover {
+  color: var(--blue);
 }
 
 p {
@@ -115,11 +119,6 @@ nav a {
 nav a:hover {
   color: var(--primary);
   background-color: var(--blue);
-}
-
-.thought-link {
-  font-size: 1.1rem;
-  text-decoration: underline;
 }
 
 .page-title {
@@ -177,7 +176,7 @@ nav a:hover {
   border: 3px solid var(--secondary);
   border-radius: var(--border-radius);
   background-color: var(--quatrinary);
-  color: var(--dark);
+  color: var(--tertiary);
 }
 
 .card-header {
@@ -200,6 +199,18 @@ nav a:hover {
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+}
+
+.card-body2 {
+  padding: 2.5%;
+  font-size: 1.4rem;
+  background-color: #282f44;
+}
+
+.thought-link {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  color: var(--green);
 }
 
 /* FORM */

@@ -12,15 +12,16 @@ const ThoughtList = ({ thoughts, title }) => {
       {thoughts &&
         thoughts.map((thought) => (
           <div key={thought._id} className="card mb-3">
-            <p className="card-header">{thought.title}</p>
-            <div className="card-body">
+            <h4 className="card-header">{thought.title}</h4>
+            <div className="card-body2">
               <Link to={`/thought/${thought._id}`}>
                 <p>{thought.thoughtText}</p>
               </Link>
-              <a href={thought.link} className="thought-link">
-                {thought.link}
-              </a>
-              <br></br>
+              <div className="thought-link">
+                <a href={thought.link} className="thought-link">
+                  {thought.link}
+                </a>
+              </div>
               <br></br>
               <p className="thought-tag">{thought.tag}</p>
               <br></br>
