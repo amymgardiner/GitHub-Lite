@@ -5,8 +5,10 @@ const FriendList = ({ friendCount, username, friends }) => {
   if (!friends || !friends.length) {
     return (
       <div>
-        <h5>Your friend list will go here!</h5>
-        <p className="bg-dark text-light p-3">{username}, make some friends!</p>
+        <h5>Your contacts:</h5>
+        <p className="bg-dark text-light p-3">
+          {username}, make some connections!
+        </p>
       </div>
     );
   }

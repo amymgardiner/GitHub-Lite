@@ -53,7 +53,7 @@ const Profile = () => {
 
         {loggedIn && userParam && (
           <button className="btn ml-auto" onClick={handleClick}>
-            Add Friend
+            Add to your contacts.
           </button>
         )}
       </div>
