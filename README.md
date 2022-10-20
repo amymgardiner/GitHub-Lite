@@ -1,15 +1,50 @@
-# Deep Thoughts
+# Github Lite
 
-## About Module 21 Lesson Activity - MERN
+## Table of Contents
 
-I built a social media application using the MERN stack. The app, named Deep Thoughts, allows users to sign up and create an account, post their thoughts, and interact with other users.
+- [Description](#description)
+- [Installation](#installation)
+- [Technologies Used](#technologies)
+- [Contributers](#contributers)
+- [Links](#links)
 
-I used GraphQL in addition to my Express server, and implemented authentication using JWT.
+## Description
 
-By completing this module, I learned how to do the following:
--Explain the difference between GraphQL and RESTful APIs.
--Configure a proxy server for local development of a MERN application.
--Implement client-side routing using React Router.
--Build API endpoints with GraphQL in a MERN application.
--Successfully configure and deploy a MERN application to Heroku.
--Implement authentication with JWT.
+Github Lite is a web application designed for developers in order to showcase their work. Users can make an account, post their work, and view their own posts on their personal profile page. When sharing their work, the user can add a title, link, desciption, and technologies used.
+
+For non-developers, the site can be used as a way to seek out developers that have the skills you need for a job. The simple interface allows a less intimidating user experience than Github. When viewing a project that interests you, the developer’s name and an email to be contacted at will be displayed.
+
+In addition, users can add comments to posts and add other users to their contact list.
+
+## Installation
+
+Just go to the website, create an account, and start posting!
+
+## Technologies
+
+- Html
+- CSS/Bootstrap
+- Javascript
+- MongoDB/Mongoose
+- React
+- GraphQL
+- Bcrypt
+- Apollo Server
+- JSON Web Tokens
+- Node.js
+- Express.js
+- Concurrently
+
+## Contributers
+
+- [Amy Gardiner](https://github.com/amymgardiner)
+- [Carly Pritchard](https://github.com/cjpritch)
+- [Griffin LeBeau](https://github.com/griffinlebeau)
+- [Oliver Dirker](https://github.com/olliedirker)
+- [Phil Branch](https://github.com/PBranch243)
+
+## Links
+
+## [Click Here to View Deployment](https://mighty-temple-98827.herokuapp.com//)
+
+## [Click Here to View Original Project Repo](https://github.com/cjpritch/github-lite)
