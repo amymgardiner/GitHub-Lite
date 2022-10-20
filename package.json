@@ -1,7 +1,7 @@
 {
-  "name": "deep-thoughts",
+  "name": "github-lite",
   "version": "1.0.0",
-  "description": "Module 21 Lesson Activity - MERN",
+  "description": "MERN final project",
   "engines": {
     "node": "16.15.1"
   },
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amymgardiner/Deep-Thoughts.git"
+    "url": "git+https://github.com:amymgardiner/GitHub-Lite.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amymgardiner/Deep-Thoughts/issues"
+    "url": "https://github.com:amymgardiner/GitHub-Lite/issues"
   },
-  "homepage": "https://github.com/amymgardiner/Deep-Thoughts#readme",
+  "homepage": "https://github.com:amymgardiner/GitHub-Lite#readme",
   "devDependencies": {
     "concurrently": "^7.4.0"
   }
