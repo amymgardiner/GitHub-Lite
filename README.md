@@ -45,6 +45,8 @@ Just go to the website, create an account, and start posting!
 
 ## Links
 
-## [Click Here to View Deployment](https://github-lite.onrender.com/)
+`Note: I use Render now for hosting my school projects, on their free plan. A free plan will spin down after 15 minutes of inactivity, and the next request will spin it back up, which can take awhile. So please be patient as the site may take some time to initially load due to Render restrictions.`
 
-## [Click Here to View Original Project Repo](https://github.com/cjpritch/github-lite)
+[Click Here to View Deployment](https://github-lite.onrender.com/)
+
+[Click Here to View Original Project Repo](https://github.com/cjpritch/github-lite)
